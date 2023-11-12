@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscapeThib·🔐</title>
+    <link rel="shortcut icon" href="jeblogo.ico" />
+    <script>
+        //navigator.mediaDevices.getUserMedia({audio: true})
+        //le play() marchait pas, j'ai pas réussi T.T
+        alert("svp, autorisez l'audio et la vidéo sur cette page et la dernière (discu5.html), firefox a interdit la lecture automatique pour les longues musiques par défaut sans autorisation et sûrement les autres navigateurs (article : https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/)")
+        document.addEventListener('keydown', (event) => {
+        const nomTouche = event.key;
+
+            if (nomTouche === 'Enter') {
+            window.location.href='discu1.html';
+            return;
+            }
+            }, false);
+    </script>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            overflow: hidden;
+        }
+        .intro{
+            animation-name: intro;
+            animation-duration: 50s;
+            width: 100%;
+            height: 100vh;
+        }
+        .planete{
+            position: absolute;
+            animation-name: planete;
+            animation-duration: 10s; 
+            animation-delay: 32s;
+            animation-timing-function: linear;
+            content: url("moon.png");
+            left: 0vw;
+            height: 50vh;
+            width: auto;
+        }
+        .planete1{
+            position: absolute;
+            animation-name: planete;
+            animation-duration: 10s; 
+            animation-delay: 33s;
+            animation-timing-function: linear;
+            content: url("space1.png");
+            right: 0vw;
+            height: 50vh;
+            width: auto;
+        }
+        .planete2{
+            position: absolute;
+            animation-name: planete;
+            animation-duration: 10s; 
+            animation-delay: 37s;
+            animation-timing-function: linear;
+            content: url("space2.png");
+            right: 50vw;
+            height: 50vh;
+            width: auto;
+        }
+        .planete3{
+            position: absolute;
+            animation-name: planete;
+            animation-duration: 10s; 
+            animation-delay: 35s;
+            animation-timing-function: linear;
+            content: url("space3.png");
+            left: 50vw;
+            height: 50vh;
+            width: auto;
+        }
+        .planete4{
+            position: absolute;
+            animation-name: planete4;
+            animation-duration: 7s; 
+            animation-delay: 40s;
+            animation-timing-function: linear;
+            content: url("space4.png");
+            left: 10vw;
+            height: 100vh;
+            animation-fill-mode: forwards;
+            width: auto;
+        }
+        .floor{
+            position: absolute;
+            animation-name: floor;
+            animation-duration: 3s; 
+            animation-delay: 45s;
+            content: url("floor.png");
+            animation-fill-mode: forwards;
+            height: 50vh;
+            width: 100vw;  
+        }
+        .autour{
+            animation-name: phrase , ciel;
+            animation-duration: 10s , 6s;
+            animation-iteration-count: 3, 1;
+            animation-delay: 0s , 30s;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, #07007E 0%, #1F25C5 100%);
+        }
+        button{
+            z-index: 5;
+            position: absolute;
+            background-color: rgb(60, 60, 211);
+            left:40%;
+            bottom: 45%;
+            animation-name: button, button1;
+            animation-duration: 50s, 6s;
+            animation-iteration-count: 1, infinite;
+            height: 10vh;
+            width: 20vw;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: oblique italic;
+            cursor: pointer;
+            color: white;
+        }
+        button:hover{
+            background-color: rgb(36, 36, 152);
+            left: 40.25%;
+            width: 19.5vw;
+            bottom: 45.25%;
+            height: 9.5vh;
+        }
+        .chute{
+            z-index: 3;
+            position: relative;
+            top: 3vh;
+            width: 1vw;
+            height: 30vh;
+            background-color: rgba(89, 89, 89);
+            border: 3px rgb(102, 102, 102) solid;
+            animation-timing-function: linear;
+            border-radius: 10px;
+            animation-name: monter;
+            animation-duration: 0.6s;
+            animation-iteration-count: 50;
+            box-shadow: 5px 5px 15px 5px #000000;
+        }
+        #chute1{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 1.5s;
+        }
+        #chute2{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 3.1s;
+        }
+        #chute3{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 1.3s;
+        }
+        #chute4{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 7.3s;
+        }
+        #chute5{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 1.5s;
+        }
+        #chute6{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 4.8s;
+        }
+        #chute7{
+            animation-name: monter;
+            animation-iteration-count: 50;
+        }
+            #chute8{
+            animation-name: monter;
+            animation-iteration-count: 50;
+            animation-delay: 6.2s;
+        }
+        .ah{
+            z-index: 4;
+            position: absolute;
+            background-color: white;
+            border-radius: 2.5vh;
+            animation-name: ah;
+            animation-duration: 5s;
+            animation-delay: 25s;
+            width: 5vh;
+            height: 5vh;
+            opacity: 0%;
+            bottom: 0%;
+            right: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+        }
+        footer{
+            position: absolute;
+            display: flex;
+            overflow: visible;
+            justify-content: space-around;
+            background-color: red;
+            width: 100%;
+            height: 10vh;
+        }
+        @keyframes button {
+            0%{opacity: 0%;z-index: -1;   }
+            98%{opacity: 0%;z-index: -1;}
+            99%{opacity: 100%;z-index: 5;}
+            100%{opacity:100%;z-index: 5;}
+        }
+        @keyframes button1 {
+            0%{rotate: 0deg;}
+            25%{rotate: 3deg;}
+            50%{rotate: 0deg;}
+            75%{rotate: -3deg;}
+            100%{rotate: 0deg;}
+        }
+        @keyframes planete4 {
+            0%{bottom: -100vh;}
+            100%{bottom: 0vh;} 
+        }
+        @keyframes ah {
+            0%{width: 5vh;height: 5vh; opacity: 100%;}
+            10%{width: 10vw;height: 5vh; opacity: 100%;}
+            90%{width: 10vw;height: 5vh; opacity: 100%;}
+            100%{width: 5vh;height: 5vh; opacity: 100%;}
+        }
+        @keyframes floor {
+            0%{bottom: -50vh;}
+            100%{bottom: 0vh;}      
+        }
+        @keyframes planete {
+            0%{bottom: -50vh;}
+            100%{bottom: 100vh;}
+        }
+        @keyframes ciel {
+            from{background: black;}
+            to{background: linear-gradient(to bottom, #07007E 0%, #1F25C5 100%);}
+        }
+        @keyframes monter {
+            from{top: 3vh;}
+            to{top: -133vh;}
+        }
+        @keyframes phrase {
+            0%{background: black; opacity: 100%;}
+            75%{background: black; opacity: 100%;}
+            80%{background: black; opacity: 40%;}
+            85%{background: black; opacity: 100%;}
+            90%{background: black; opacity: 40%;}
+            95%{background: black; opacity: 100%;}
+            100%{background: black; opacity: 100%;}
+        }
+        @keyframes hide {
+            0%{opacity: 0%;}
+            99%{opacity: 0%;}
+            100%{opacity: 100%;}
+        }
+        @media (max-width:500px){
+            *{
+            background-color: rgb(255, 0, 0);
+            text-align: center;
+            text-size-adjust: 20vw;
+            color: white;
+        }
+        body{
+            content: url("misterthib.png");
+        }
+        }
+        @keyframes intro {
+            15%{content: url();}
+            16%{content:url(lethib.png);}
+            17%{content: url();}
+            18%{content:url(lethib.png);}
+            20%{content:url(lethib.png);}
+            25%{content: url();}
+            35%{content: url();}
+            36%{content:url(logoet.png)}
+            37%{content: url();}
+            38%{content:url(logoet.png)}
+            40%{content: url(logoet.png);}
+            45%{content: url()}
+            100%{content: url()}
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay preload="auto" loop><source src="evolution.mp3" type="audio/mp3"></audio>
+    
+    <div class="ah">! | <h6> "entrer" pour passer</h6></div><div class="autour"><a href="discu1.html"><button href="discu1.html"><b>CLIQUE ici pour continuer</b></button></a><div class="intro"></div><div class="planete"></div><sdiv class="planete1" src="space1.png"></sdiv><div class="planete2" src="space2.png"></div><div class="planete3" src="space3.png"></div><div class="planete4" src="space4.png"></div><div class="floor" onmouseover="generate()"></div></div>
+    <footer><div class="chute" id="chute1"></div><div class="chute" id="chute2"></div><div class="chute" id="chute3"></div><div class="chute" id="chute4"></div><div class="chute" id="chute5"></div><div class="chute" id="chute6"></div><div class="chute" id="chute7"></div><div class="chute" id="chute8"></div></footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>EscapeThib·🔐</title>
+    <link rel="shortcut icon" href="jeblogo.ico">
+    <script>
+        document.addEventListener('keydown', (event) => {
+        const nomTouche = event.key;
+
+            if (nomTouche === 'Enter') {
+            window.location.href='discu2.html';
+            return;
+            }
+            }, false);
+    </script>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+        overflow: hidden;
+        /*background: linear-gradient(to bottom, #07007E 0%, #1F25C5 100%);*/
+    }
+    .groundback{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to bottom, #07007E 0%, #1F25C5 100%);
+        animation-name: groundback;
+        animation-duration: 1s;
+    }
+    
+    .floor{
+        z-index: 3;
+        content: url("floor.png");
+        position: absolute;
+        height: 50vh;
+        width: 100vw;
+        bottom: 0vh;
+    }
+    .planete4{
+            z-index: 2;
+            content: url("space4.png");
+            position: absolute;
+            left: 10vw;
+            height: 100vh;
+            bottom: 0vh;
+            width: auto;
+        }
+    .jeb{
+        z-index: 3;
+        position: relative;
+        height: 40vh;
+        width: auto;
+        bottom: -40vh;
+        left: 30vw;
+        content:url("Jeb2128/jeb0.png");
+        animation-name: jeb;
+        animation-duration: 18s;
+    }
+    .msgjebd{
+        z-index: 4;
+        content: url("msgjebd.png");
+        position: absolute;
+        height: auto;
+        width: 35vw;
+        right: 7.5vw;
+        top: 1vh;
+        opacity: 0%;
+        animation-name: discu;
+        animation-delay: 18s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    .discu{
+        z-index: 3;
+        position: absolute;
+        animation-name: discu;
+        animation-delay: 18s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0%;
+        width: 40vw;
+        height: 40vh;
+        background-color: white;
+        border: solid rgb(203, 203, 203) 4px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        right: 5vw;
+        top: 20vh;
+        cursor:default;
+        text-align: center;
+        overflow-y: auto;
+    }
+    .ah{
+            z-index: 5;
+            position: absolute;
+            background-color: white;
+            border-radius: 2.5vh;
+            animation-name: ah;
+            animation-duration: 10s;
+            animation-delay: 25s;
+            animation-iteration-count: infinite;
+            width: 5vh;
+            height: 5vh;
+            opacity: 0%;
+            bottom: 0%;
+            right: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    .a1{
+        animation-name: hide;
+        animation-duration: 2s;
+        opacity: 0%;
+        animation-fill-mode: forwards;
+        animation-delay: 18s;
+    }
+    .a2{
+        animation-name: hide;
+        animation-duration: 2s;
+        opacity: 0%;
+        animation-fill-mode: forwards;
+        animation-delay: 19s;
+    }
+    .a3{
+        animation-name: hide;
+        animation-duration: 2s;
+        opacity: 0%;
+        animation-fill-mode: forwards;
+        animation-delay: 20s;
+    }
+    .a4{
+        animation-name: hide;
+        animation-duration: 2s;
+        opacity: 0%;
+        animation-fill-mode: forwards;
+        animation-delay: 21s;
+    }
+    button{
+            z-index: 5;
+            position: absolute;
+            background-color: rgb(60, 60, 211);
+            right: 7vw;
+            top: 58vh;
+            animation-name: button, button1;
+            animation-duration: 23s, 6s;
+            animation-iteration-count: 1, infinite;
+            height: 10vh;
+            width: 20vw;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            cursor: pointer;
+        }
+    button:hover{
+            background-color: rgb(36, 36, 152);
+            right: 7.25vw;
+            width: 19.5vw;
+            top: 58.25vh;
+            height: 9.5vh;
+        }
+    @keyframes jeb {
+        0%{content:url("Jeb2128/jeb0.png");left: -20vh;transform: rotate(45deg);}
+        5%{content:url("Jeb2128/jeb0.png");left: -15vh;transform: rotate(50deg);}
+        10%{content:url("Jeb2128/jeb5.png");left: -15vh;transform: rotate(45deg);}
+        15%{content:url("Jeb2128/jeb5.png");left: -15vh;transform: rotate(50deg);}
+        20%{content:url("Jeb2128/jeb5.png");left: -15vh;transform: rotate(45deg);}
+        30%{content:url("Jeb2128/jeb5.png");left: -15vh;transform: rotate(50deg);}
+        60%{content:url("Jeb2128/jeb4.png");bottom: -40vh;left: 30vw;transform: rotate(0deg);}
+        64%{transform: rotate(10deg);}
+        68%{transform: rotate(-10deg);}
+        72%{transform: rotate(10deg);}
+        76%{transform: rotate(-10deg);}
+        78%{bottom: -20vh;}
+        80%{transform: rotate(0deg);content:url("Jeb2128/jeb4.png")}
+        100%{content:url("Jeb2128/jeb4.png");}
+    }
+    @keyframes jeb2 {
+        0%{content:url("Jeb2128/jeb0.png")}
+        54%{transform: rotate(10deg);}
+        58%{transform: rotate(-10deg);}
+        62%{transform: rotate(10deg);}
+        66%{transform: rotate(-10deg);}
+        80%{transform: rotate(0deg);}
+        80%{content:url("Jeb2128/jeb4.png");bottom: -20vh;}
+        100%{content:url("Jeb2128/jeb4.png");}
+    }
+    @keyframes discu {
+        0%{opacity: 100%;}
+        100%{opacity: 100%;}
+    }
+    @keyframes ah {
+            0%{width: 5vh;height: 5vh; opacity: 100%;}
+            5%{width: 10vw;height: 5vh; opacity: 100%;}
+            75%{width: 10vw;height: 5vh; opacity: 100%;}
+            85%{width: 5vh;height: 5vh; opacity: 100%;}
+            100%{width: 5vh;height: 5vh; opacity: 0%;}
+        }
+        @keyframes button {
+            0%{opacity: 0%;z-index: -1;   }
+            98%{opacity: 0%;z-index: -1;}
+            99%{opacity: 100%;z-index: 5;}
+            100%{opacity:100%;z-index: 5;}
+        }
+        @keyframes button1 {
+            0%{rotate: 0deg;}
+            25%{rotate: 3deg;}
+            50%{rotate: 0deg;}
+            75%{rotate: -3deg;}
+            100%{rotate: 0deg;}
+        }
+        @keyframes hide {
+            0%{opacity: 0%;}
+            100%{opacity: 100%;}
+        }
+        @keyframes groundback {
+            0%{background:black;}
+            1000%{background-color: black;}
+        }
+</style>
+<body>
+    <audio autoplay src="november.mp3"></audio>
+    <div class="groundback">
+        <div class="jeb"></div>
+        <div class="planete4"></div>
+        <div class="msgjebd"></div>
+        <div class="discu">
+        </br>
+            <h2 class="a1">Bonjour, moi c'est <a style="color:red;">Jeb2128 🤖</a> ! ^^</h2>
+            <h2 class="a2">C'est rare de voir un humain dans le <a style="color:blue;">métaverse 🌌</a>...</h2>
+            <h2 class="a3">Comment as-tu pu donc tomber là ?</h2>
+            <h2 class="a4">Il faut se dépêcher pour que tu puisses remonter, suis-moi ! </h2>
+        </div>
+    </div>
+    <div class="ah">! | <h6> "entrer" pour passer</h6></div>
+    <a href="discu2.html"><button><b>CLIQUE ici pour continuer</b></button></a>
+    <div class="floor"></div>
+    
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="jeblogo.ico">
+    <title>EscapeThib·🔐</title>
+    <script>
+        let coucou = document.getElementsByClassName('info');
+        let coucou1 = document.getElementsByClassName('jebcoucou');
+        let coucou2 = document.getElementsByClassName("button");
+        let coucou3 = document.getElementsByClassName('leportail');
+        let coucou4 = document.getElementsByClassName('ah');
+        let coucou5 = document.getElementsByClassName("msgjebd");
+        let coucou6 = document.getElementsByClassName("buttonsuite2");
+        let coucou7 = document.getElementsByClassName("portail");
+        let coucou8 = document.getElementsByClassName("portaild");
+        let coucou9 = document.getElementsByClassName("portaild1");
+        let coucou10 = document.getElementsByClassName("toucher");
+        let y = 0;
+
+        document.addEventListener('keydown', (event) => {
+        const nomTouche = event.key;
+            if (nomTouche === 'Enter') {
+                if (y == 0){
+                coucou[0].style.zIndex = "-1";
+                coucou1[0].style.animationName = "jeboui";
+                coucou1[0].style.animationDuration = "3s";
+                coucou1[0].style.animationFillMode = "forwards";
+                coucou2[0].style.zIndex = "-1";
+                coucou5[0].style.zIndex = "-1";
+                y = y+1;
+            return;
+                }
+                else if (y == 2){
+                    console.log('oui');
+                }
+                if (uwu == 1){
+                    suite2()
+                }
+            }
+            }, false);
+        function suite(){
+            if (y == 0){
+                coucou[0].style.zIndex = "-1";
+                coucou1[0].style.animationName = "jeboui";
+                coucou1[0].style.animationDuration = "3s";
+                coucou1[0].style.animationFillMode = "forwards";
+                coucou2[0].style.zIndex = "-1";
+                coucou5[0].style.zIndex = "-1";
+                y = y+1;
+            }
+                return;
+        }
+        function suite2() {
+                coucou[0].style.zIndex = "-1";
+                coucou6[0].style.zIndex = "-1";
+                coucou5[0].style.zIndex = "-1";
+                coucou7[0].style.animationName = "suitec";
+                coucou8[0].style.animationName = "suiteg";
+                coucou9[0].style.animationName = "suited";
+                coucou1[0].style.animationName = "jebsd";
+                coucou10[0].style.zIndex = "-1";
+                y = 4;
+                setInterval(() => {
+                    //Là c'est le truc de modif des hrefs pour les pages !important (la page 3 marche pas)
+                    window.location.href = "discu4.html";
+                },4000);
+        }
+        let uwu = 0;
+        function couler(){
+            coucou5[0].innerHTML += "<audio autoplay src='sms-alert-2-daniel_simon.mp3'>";
+            coucou3[0].style.content = "url('portail2.png')";
+            setInterval(() => {
+                if (y < 3) {
+                coucou[0].style.zIndex = "10";
+                coucou5[0].style.zIndex = "11";
+                coucou[0].innerHTML = "<h1 style='text-align: center;'></br></br></br>Oh, dans cette <a style='color:blue;''>gargouille 🐉</a>, se cachait la formule magique pour passer la <a style='color:brown;'>porte 🚪</a>, bien joué ! Allons découvrir les autres mystères de ce  <a style='color:orange;'>temple ⛩</a></br><em>''iot-ervuo, emasès''</em></h1>";
+                coucou1[0].style.animationName = "jeboui2";
+                coucou4[0].innerHTML = '! | <h6> "h" pour de l"aide</h6>';
+                coucou6[0].style.zIndex = "11";
+            }
+                uwu = 1;
+                y = 3;
+            }, 2000);
+            return;
+        }
+        //------------------------------------------------------------//
+        let x = 0;
+        document.addEventListener('keydown', (event) => {
+        const nomTouche = event.key;
+
+            if (nomTouche === 'h') {
+                if (x == 0) {
+                alert("As-tu regardé les gargouilles ? 👀");
+                x = x+1;
+            return;
+                }
+                else {
+                alert("Clique sur celle de gauche pour la suite de l'aventure ! 👀");
+                }
+            }
+            }, false);
+    </script>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            overflow: hidden;
+        }
+        .groundback{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #07007E 0%, #1F25C5 100%);
+        }
+        .msgjebd{
+        z-index: 11;
+        content: url("msgjebd.png");
+        position: absolute;
+        height: auto;
+        width: 35vw;
+        right: 32vw;
+        top: -4vh;
+        opacity: 100%;
+    }
+        .info{
+            z-index: 10;
+            position: absolute;
+            background-color: white;
+            border: solid rgb(203, 203, 203) 4px;
+            border-radius: 4vh;
+            height: 80vh;
+            width: 32vw;
+            bottom: 10vh;
+            left: 34vw;
+        }
+        .jebcoucou{
+            z-index: 9;
+            position: absolute;
+            height: 40vh;
+            width: auto;
+            content: url("Jeb2128/jeb2.png");
+            top: 0%;
+            right: 23vw;
+            transform: rotate(45deg);
+        }
+        .portail{
+            position: absolute;
+            width: 30vw;
+            height: 30vw;
+            left: 35vw;
+            bottom: 0vh;
+            animation-delay: 0s;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        .portaild{
+            position: absolute;
+            width: 30vw;
+            height: 30vw;
+            left: 0vw;
+            bottom: 5vh;
+            content: url("portaild.png");
+            animation-delay: 0s;
+            animation-duration: 1.8s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        .portaild1{
+            position: absolute;
+            width: 30vw;
+            height: 30vw;
+            right: 0vw;
+            top: 5vh;
+            content: url("portaild1.png");
+            animation-delay: 0s;
+            animation-duration: 1.8s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        .toucher{
+            z-index: 2;
+            position: relative;
+            top:2%;
+            left:2%;
+            width: 7vw;
+            height: 7vw;
+            cursor:cell;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            border-radius: 2vw;
+        }
+        .toucher:hover{
+            animation-name: touchercouleur;
+        }
+        .button{
+            z-index: 11;
+            position: absolute;
+            background-color: rgb(60, 60, 211);
+            right: 40vw;
+            top: 75vh;
+            animation-name: button, button1;
+            animation-duration: 0s, 6s;
+            animation-iteration-count: 1, infinite;
+            height: 10vh;
+            width: 20vw;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: rgb(36, 36, 152);
+            right: 40.25vw;
+            width: 19.5vw;
+            top: 75.25vh;
+            height: 9.5vh;
+        }
+        .buttonsuite2 {
+            z-index: -1;
+            position: absolute;
+            background-color: rgb(60, 60, 211);
+            right: 40vw;
+            top: 80vh;
+            animation-name: button, button1;
+            animation-duration: 0s, 6s;
+            animation-iteration-count: 1, infinite;
+            height: 10vh;
+            width: 20vw;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            cursor: pointer;
+        }
+        .buttonsuite2:hover{
+            background-color: rgb(36, 36, 152);
+            right: 40.25vw;
+            width: 19.5vw;
+            top: 80.25vh;
+            height: 9.5vh;
+        }
+        .ah{
+            z-index: 5;
+            position: absolute;
+            background-color: white;
+            border-radius: 2.5vh;
+            animation-name: ah;
+            animation-duration: 7s;
+            animation-delay: 10s;
+            animation-iteration-count: 1;
+            width: 5vh;
+            height: 5vh;
+            opacity: 0%;
+            bottom: 0%;
+            right: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes touchercouleur {
+            0%{opacity: 0%; background-color: yellow;}
+            50%{opacity: 30%; background-color: yellow;}
+            100%{opacity: 0%; background-color: yellow;}
+        }
+        @keyframes jeboui {
+            0%{content: url("Jeb2128/jeb1.png");}
+            100%{transform: rotate(0deg); top: 60%; content: url("Jeb2128/jeb1.png");}
+        }
+        @keyframes jeboui2 {
+            0%{transform: rotate(0deg); top: 60%;content: url("Jeb2128/jeb3.png");}
+            100%{transform: rotate(-10deg); top: 40%; right: 10vw; content: url("Jeb2128/jeb3.png");}
+        }
+        @keyframes button {
+            0%{opacity: 0%;z-index: -1;   }
+            98%{opacity: 0%;z-index: -1;}
+            99%{opacity: 100%;z-index: 11;}
+            100%{opacity:100%;z-index: 11;}
+        }
+        @keyframes button1 {
+            0%{rotate: 0deg;}
+            25%{rotate: 3deg;}
+            50%{rotate: 0deg;}
+            75%{rotate: -3deg;}
+            100%{rotate: 0deg;}
+        }
+        @keyframes ah {
+            0%{width: 5vh;height: 5vh; opacity: 100%;}
+            5%{width: 10vw;height: 5vh; opacity: 100%;}
+            75%{width: 10vw;height: 5vh; opacity: 100%;}
+            85%{width: 5vh;height: 5vh; opacity: 100%;}
+            100%{width: 5vh;height: 5vh; opacity: 0%;}
+        }
+        @keyframes suiteg {
+            0%{width: 30vw;height: 30vw;left: 0vw;bottom: 5vh;}
+            80%{width: 30vw;height: 30vw;left: -30vw;bottom: 5vh;}
+            100%{width: 30vw;height: 30vw;left: -30vw;bottom: 5vh;}
+        }
+        @keyframes suitec {
+            0%{width: 30vw;height: 30vw;left: 35vw;bottom: 0vh;}
+            80%{width: 200vw;height: 200vw;left: -50vw;bottom: -200vh; background-color: transparent;}
+            100%{width: 200vw;height: 200vw;left: -50vw;bottom: -200vh;background-color: white; opacity: 100%;}
+        }
+        @keyframes suited {
+            0%{width: 30vw;height: 30vw;right: 0vw;top: 5vh;}
+            80%{width: 30vw;height: 30vw;right: -30vw;top: 5vh;}
+            100%{width: 30vw;height: 30vw;right: -30vw;top: 5vh;}
+        }
+        @keyframes jebsd {
+            0%{transform: rotate(-10deg); top: 40%; right: 10vw; content: url("Jeb2128/jeb3.png");}
+            80%{transform: rotate(-10deg); top: 40%; right: -40vh; content: url("Jeb2128/jeb3.png");}
+            100%{transform: rotate(-10deg); top: 40%; right: -40vh; content: url("Jeb2128/jeb3.png");}   
+        }
+    </style>
+</head>
+<body>
+    <div class="groundback"></div>
+    <div class="portail"><img class="leportail" style="position: absolute;height:100%;width:100%;content: url('portail1.png');"><div class="toucher" onclick="couler()"></div></div>
+    <div class="portaild"></div>
+    <div class="portaild1"></div>
+    <div class="jebcoucou"></div>
+    <div class="msgjebd"></div>
+    <div class="info"><h1 style="text-align: center;"></br></br></br> Voici la <a style="color:brown;">porte 🚪</a> du temple de repos !</br> <a style="color:green;">Clique 👆</a> sur le décors pour trouve les clés cachées afin d'accéder au niveau supérieur du <a style="color:blue;">métaverse 🌌</a> !</h1></div>
+    <button class="button" onclick="suite()"><b>CLIQUE ici pour continuer</b></button>
+    <button class="buttonsuite2" onclick="suite2()"><b>CLIQUE ici pour continuer</b></button>
+    <div class="ah">! | <h6> "h" pour de l'aide</h6></div>
+</body>
+</html>

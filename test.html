@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laoding</title>
+    <script>
+
+let lol = document.getElementsByClassName("light");
+    addEventListener("mousemove", function(e) {
+        lol[0].style.left = e.clientX + "px";
+        lol[0].style.top = e.clientY + "px ";
+        let droite = lol[0].style.left;
+        let haut = lol[0].style.top;
+        //if(droite =){
+
+        //}
+        console.log(Math.floor(e.clientX*100 / window.innerWidth));
+        console.log(Math.floor(e.clientY*100 / window.innerHeight));
+        console.log("- ^^ -")
+    });
+    
+    </script>
+    <style>    
+    .div {
+        width: 400px;
+        height: 200px;
+        padding: 20px;
+        margin: 50px auto;
+        background: purple;
+      }
+      .light {
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    background: black;
+    z-index: 10;
+    height: 60px;
+    width: 60px;
+    transition: all 100ms ease-out;
+    border: solid yellow 10px;
+    animation-name: flash1;
+    animation-duration: 2s;
+}
+      </style>
+</head>
+<body>
+    <div class="div"></div>
+    <div class="light"></div>
+</body>
+</html>

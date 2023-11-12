@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscapeThib·🔐</title>
+    <link rel="shortcut icon" href="jeblogo.ico">
+    <script>
+    let k = 0;
+    let a = 0;
+    let cursor = document.getElementsByClassName("light");
+    let cacher = document.getElementsByClassName("cacher");
+        addEventListener("mousemove", function(e) {
+        let droite = e.clientY * 100 / window.innerWidth;
+        let haut = e.clientY * 100 / window.innerHeight;
+        cursor[0].style.left = e.clientX * 100 / window.innerWidth + "vw"; // screenX/12.8
+        cursor[0].style.top = e.clientY * 100 / window.innerHeight + "vh";;
+        });
+        function suite(){
+            cacher[0].style.zIndex = "-2";
+            cacher[0].style.opacity = "0%";
+            cacher[1].style.zIndex = "-2";
+            cacher[1].style.opacity = "0%";
+            cacher[2].style.zIndex = "-2";
+            cacher[2].style.opacity = "0%";
+                let tomber1 = document.getElementsByClassName("tetris1");
+                let tomber2 = document.getElementsByClassName("tetris2");
+                let tomber3 = document.getElementsByClassName("tetris3");
+                let tomber4 = document.getElementsByClassName('timer');
+                //let maisnon1 = 0;
+                let gg = 0;
+
+                    setInterval(() => {
+                a ++
+                console.log(a + " modulo : " + 2%a)
+                if (2%a == 1) {
+                    
+                tomber4[0].innerText = gg + " %";
+                k = 1
+                console.log("test")
+                //k = Math.floor(Math.random()*10);
+                    if(k < 4){
+                        console.log("premier");
+                        tomber1[0].style.animation = "jeanbernard 5s";
+                        //function fufu(x) {
+                        //let nIntervID = setInterval(tomberlà1, 100); 
+                        //setTimeout(() => {
+                        //let maisnon1 = 0;
+                        //clearInterval(nIntervID);
+                        //}, 6000); 
+                        //}
+                        //    function tomberlà1() {
+                        //    if(maisnon1 > 100) {
+                        //    } 
+                        //    if(maisnon1 < 100 ) {
+                        //    maisnon1 ++
+                        //    tomber1[0].style.transform = "translate(0vh, calc("+maisnon1.toString()+"vh + "+3*maisnon1.toString()+"px))";
+                        //    console.log(maisnon1)
+                        //    }
+                        //    }
+                        
+            }
+                    if(k > 7){
+                        console.log("deuxième")
+                        tomber2[0].style.animation = "jeanbernard 5s";
+            }
+                    if(k >= 4 && k <= 7){
+                        console.log("troisième")
+                        tomber3[0].style.animation = "jeanbernard 5s";
+            }
+
+        } else {
+                a = 0;
+                tomber1[0].style.animation = "";
+                console.log("heyou");   
+                }
+    }, 2500);
+                     
+    }    
+    </script>
+<style>
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+    .arriver{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        animation-name: flash;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+    .timer{
+        position: absolute;
+        z-index: 101;
+        color: red;
+        animation-name: flash1;
+        animation-duration: 2s;
+    }
+    .deco{
+        content: url("nightd.png");
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        animation-name: flash1;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        overflow: hidden;
+    }
+    @keyframes flash {
+        from{opacity: 100%;background-color: white;}
+        to{opacity: 0%;background-color: white;}
+    }
+    @keyframes flash1 {
+        from{opacity: 0%;background-color: white;}
+        to{opacity: 0%;background-color: white;}
+    }
+    @keyframes jeanbernard {
+        from{bottom: 0vh;}
+        to{bottom: calc(-100vh - 300px);}
+    }
+    .light {
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    background: none;
+    z-index: 10;
+    height: 60px;
+    width: 60px;
+    transition: all 100ms ease-out;
+    border: solid black 3000px;
+    animation-name: flash1;
+    animation-duration: 2s;
+    left: -30px;
+}
+.msgjebd{
+        z-index: 101;
+        content: url("msgjebd.png");
+        position: absolute;
+        height: auto;
+        width: 35vw;
+        right: 32.5vw;
+        top: -4vh;
+        opacity: 100%;
+    }
+.info{
+        z-index: 100;
+        position: absolute;
+        width: 30vw;
+        height: 80vh;
+        background-color: white;
+        border: solid rgb(203, 203, 203) 4px;
+        border-radius: 30px;
+        right: 35vw;
+        top: 10vh;
+        cursor:default;
+        text-align: center;
+        overflow-y: auto;
+}
+.tetouttris{
+    position: absolute;
+    width: 100vw;
+    height: 300px;
+    top: -300px; 
+    z-index: 100;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.tetris{
+    position: relative;
+    width: auto;
+    height: 300px;
+    content: url("tetris1.png");
+    background-color: yellow;
+}
+.button{
+            z-index: 101;
+            position: absolute;
+            background-color: rgb(60, 60, 211);
+            right: 36vw;
+            top: 85vh;
+            animation-name: button, button1;
+            animation-duration: 0s, 6s;
+            animation-iteration-count: 1, infinite;
+            height: 10vh;
+            width: 20vw;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            cursor: pointer;
+    }
+        .button:hover{
+            background-color: rgb(36, 36, 152);
+            right: 36.25vw;
+            width: 19.5vw;
+            top: 85.25vh;
+            height: 9.5vh;
+        }
+        .cacher{
+            animation-name: flash1;
+            animation-duration: 2.5s;
+        }
+</style>
+</head>
+<body style="overflow:hidden;">
+    <h1 class="timer"> %</h1>
+    <div class="deco"></div>
+    <div class="arriver"></div>
+    <div class="light"></div>
+    <div class="msgjebd cacher"></div>
+    <div class="info cacher">
+    <b>
+        <br>
+        <br>
+        <br>
+        Oh, mais où est-on encore ? Un <a style="color: gray;">flash ✨</a> aveuglant m'a fait perdre notre trace...
+        <br>
+        <a style="color: red;">Empêche 🛡️</a> les pièces de tomber pour que je puisse me concentrer ! A <a style="color:green">100%</a> de niveau de concentration, je pourrai nous localiser
+    </b>
+        <div style="position: relative; left: 10%; content: url('tutotetris.gif'); opacity: 80%; width: 75%;"></div>
+    </div>
+    <button class="button cacher" onclick="suite()"><b>CLIQUE ici pour continuer</b></button>
+        <div class="tetouttris"><div class="tetris tetris1"></div><div class="tetris tetris2"></div><div class="tetris tetris3"></div></div>
+</body>
+</html>

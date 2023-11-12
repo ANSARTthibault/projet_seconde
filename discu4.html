@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscapeThib·🔐</title>
+    <link rel="shortcut icon" href="jeblogo.ico">
+    <script>
+        let score = 0;
+        const infopluslà = document.getElementsByClassName('info');
+        const etpoufleboutonaussipluslà = document.getElementsByClassName('button');
+        let luiparcontreilapparait = document.getElementsByClassName('curseur');
+        let luiildonnelesresultats = document.getElementsByClassName('scoreenhaut');
+        let espaceetci = document.getElementsByClassName('espace')
+        let bill = document.getElementsByClassName('boule');
+        let jeb = document.getElementsByTagName("img");
+        let tempsi = document.getElementsByClassName('tempsi');
+        let tempsjs = document.getElementsByClassName('fleche');
+        let timetime = 30;
+
+        function jeu() {
+            infopluslà[0].style.zIndex = "-1";
+            etpoufleboutonaussipluslà[0].style.zIndex = "-1";
+            tempsjs[0].style.zIndex = "-1";
+            tempsjs[1].style.zIndex = "-1";
+            //luiparcontreilapparait[0].style.animation = "Gaïa 8s infinite ease";
+                let pousser = document.getElementsByClassName('pousser');
+                jeb[0].style.animation = "place 1s ease-in-out forwards"
+
+                bill[0].style.zIndex = "2";
+                let popo = Math.floor(Math.random()*900);
+                console.log(popo);
+                bill[0].style.left = "calc(" + popo + "px)";
+
+
+
+
+
+                document.addEventListener('keydown', (event) => {
+                const nomTouche = event.key;
+                if (nomTouche === 't' ) {
+                    let arbre = pousser[0].offsetWidth;
+                    console.log(popo)
+                    if (arbre > popo-150 && popo+250 > arbre+200) {
+                           
+                       console.log("on sait jamais");
+                       popo = Math.floor(Math.random()*900);
+                       bill[0].style.left = "calc(" + popo + "px)";
+                    score = score + 5
+
+
+                } else {
+                    if (score > 0) {
+                        score = score - 5;       
+                    } else {
+                        score = 0
+                    }
+                    console.log("on sait jamais plus");
+            }
+                if (score <= 20) {
+                    luiildonnelesresultats[0].style.color = "green";
+                }
+
+                if (score > 20) {
+                    luiildonnelesresultats[0].style.color = "orange";
+                    jeb[0].style.content = "url('jeb2128/Jeb0.png')"
+            }
+                if ( score >= 40) {
+                    luiildonnelesresultats[0].style.color = "red";
+                    jeb[0].style.content = "url('jeb2128/Jeb5.png')"
+            }
+
+            console.log(score + " %")
+            luiildonnelesresultats[0].innerHTML = score + " / 50" + "</br>" + timetime + " s";
+            if (score >= 50) {
+                window.location.href = "discu5.html";
+            }
+            return
+
+                } else {
+
+                return
+                }
+            }, false);
+
+            // le timer 1 minute
+            setInterval(() => {
+                timetime --
+                luiildonnelesresultats[0].innerHTML = score + " / 50" + "</br>" + timetime + " s";
+                if (timetime <= 0) {
+                    location.reload()
+                }
+            }, 1000);
+
+
+
+
+        }
+
+        function tempsp(){
+            if (timetime < 60) {
+                timetime = timetime + 5;
+                tempsi[0].innerHTML = timetime;       
+            }
+        }
+        function tempsm(){
+            if (timetime > 20) {
+                timetime = timetime - 5;
+                tempsi[0].innerHTML = timetime;       
+            }
+
+        }
+
+    </script>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .espace{
+            position: absolute;
+            width : 1000px;
+            height: 200px;
+            top: calc(50vh - 100px);
+            left: calc(50vw - 500px);
+            border: solid black 2px;
+            border-radius: 30px;
+            background: radial-gradient(ellipse at center, #A4A4A4 0%, #A4A4A4 50%, #000000 100%);     
+        }
+        .boule{
+            position: absolute;
+            z-index: -1;
+            width: 100px;
+            height: 100px;
+            top: calc(50% - 50px);
+            content:url('viser.png');
+        }
+        .scoreenhaut{
+            position: absolute;
+            width: 20vw;
+            height: 12vh;
+            right: 40vw;
+            z-index: 3;
+            background-color: wheat;
+            border-bottom: 3px solid rgb(0, 112, 102);
+            border-left: 3px solid rgb(0, 112, 102);
+            border-right: 3px solid rgb(0, 112, 102);
+            border-end-end-radius: 30px;
+            border-end-start-radius: 30px;
+            text-align: center;
+            font-size: larger;
+            color: green;
+            font-weight: bold;
+            }
+        .rail{
+            position: absolute;
+            height: 10%;
+            width: 90%;
+            top: 43.5%;
+            right: 5%;
+            background-color: white;
+            border: 3px solid rgb(152, 152, 152);
+            border-radius: 10px;
+        }
+        .espacerelatif{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        .pousser{
+            z-index: 2;
+            position: relative;
+            animation: Gaïav2 5s infinite ease-in-out;
+            height: 200px;
+            width: 0%;
+            left: 0%;
+        }
+        .curseur{
+            z-index: 2;
+            position: relative;
+            width : 200px;
+            height: 200px;
+            /*background-color: orange;*/
+        }
+        .cercle{
+            width: 90%;
+            height: 90%;
+            border: solid red 10px;
+            border-radius: 50%;
+        }
+        .trait1{
+            position: absolute;
+            height: 110%;
+            width: 8%;
+            background-color: red;
+            border-radius: 10px;
+            right: 46%;
+            top: -5%;
+        }
+        .trait2{
+            position: absolute;
+            height: 110%;
+            width: 8%;
+            background-color: red;
+            border-radius: 10px;
+            right: 46%;
+            top: -5%;
+            transform: rotate(90deg);
+        }
+        .plan{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /*background: radial-gradient(ellipse at center, #000000 0%, #A4A4A4 50%, #000000 100%);*/
+            background: radial-gradient(ellipse at center, #07007E, #1F25C5 50%, #07007E 100%);
+        }
+        .info{
+        z-index: 3;
+        position: absolute;
+        width: 40vw;
+        height: 60vh;
+        background-color: white;
+        border: solid rgb(203, 203, 203) 4px;
+        border-radius: 30px;
+        right: 30vw;
+        top: 20vh;
+        cursor:default;
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .fleche{
+            position: absolute;
+            width : 4vw;
+            height: 4vh;
+            z-index: 3;
+            background-color: rgb(190, 174, 0);
+            border: solid black 2px;
+            border-radius: 7px;
+            right: 34vw;
+            text-align: center;
+            cursor: pointer;
+        }
+        .fleche:hover{
+            background-color: rgb(146, 134, 0);
+        }
+        .flecheh{
+            top: 56vh;
+        }
+        .flecheb{
+            top: 67vh;
+        }
+        .button{
+            z-index: 5;
+            position: absolute;
+            background-color: rgb(60, 60, 211);
+            right: 40vw;
+            top: 70vh;
+            height: 10vh;
+            width: 20vw;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            cursor: pointer;
+        }
+        .button:hover{
+            z-index: 5;
+            position: absolute;
+            background-color: rgb(36, 36, 152);
+            right: 40.5vw;
+            top: 70.5vh;
+            height: 9vh;
+            width: 19vw;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            cursor: pointer;
+        }
+        /*@keyframes Gaïa {
+            0%{right: 0px;}
+            50%{right: -800px;}
+            100%{right: 0px;}
+        }*/
+        @keyframes Gaïav2 {
+            0%{width: 0px;}
+            50%{width: 800px;}
+            100%{width: 0px;}
+        }
+        @keyframes place {
+            from{top: 40vh;left:20vw;}
+            to{top: calc(100vh - 250px);left:0vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="plan"></div>
+    <div class="scoreenhaut"> POINTS</div>
+    <div class="espace"><div class="boule"></div><div class="rail"></div>
+
+    <div class="espacerelatif">
+        <div class="pousser"></div><div class="curseur"><div class="cercle"></div><div class="trait1"></div><div class="trait2"></div></div>
+    </div>
+
+</div>
+<img src="jeb2128/jeb0.png" style="width: auto; height: 250px; position:absolute; z-index:4;top: 40vh;left:20vw;">
+    <div class="info"> <h1 style="text-align: center;"> Ah, maintenant,</br> voilà des <a style="color: brown">astéroides ☄️</a> !</br> Tire avec la <a style="color: red;">touche "t"</a>!</br>Tu as <a class="tempsi" style="color:grey; font-size: larger;">30</a> secondes,</br> Bonne chance </h1></div>
+    <div class=" fleche flecheh" onclick="tempsp()">⏫</div><div class="fleche flecheb" onclick="tempsm()">⏬</div>
+    <button class="button" onclick="jeu()"><b>CLIQUE ici pour continuer</b></button>
+</body>
+</html>
